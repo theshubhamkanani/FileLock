@@ -136,19 +136,20 @@ public class FILELOCK extends JFrame implements ActionListener{
         }
     }
 
-    public void signUp(){
-        try{
+    public void signUp() {
+        try {
             OTP = GenerateOTP.getOTP();
             SignUp su = new SignUp(OTP);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
     
+    // Application Stating Point.
     public static void main(String[] args){
         FILELOCK f = new FILELOCK();
 
-        int x = 1;
+        int x = 1; 
         for(int i = 1; i <= 460; x+=7, i+=6){
             f.setLocation(750-(x+i)/2, 400-(i/2));    
             f.setSize(i+x, i);
